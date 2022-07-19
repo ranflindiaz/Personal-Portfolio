@@ -1,0 +1,313 @@
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  html {
+    box-sizing: border-box;
+    /* Set font size for easy rem calculations
+     * default document font size = 16px, 1rem = 16px, 100% = 16px
+     * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+    */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: sans-serif, Helvetica;
+    font-size: 1.6rem;
+  }
+    /********** Header ***********/
+  header {
+    width: 100%;
+    background-color: var(--main-red);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--main-white);
+    height: 45px;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+  }
+
+  header a .logo {
+    width: 4rem;
+    height: 4rem;
+    vertical-align: middle;
+    margin-left: 2rem;
+  }
+
+  header a {
+    text-decoration: none;
+  }
+  
+  /********** Navigation ***********/
+  .nav-list{
+    list-style-type: none;
+  }
+
+  .nav-list li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 5px;
+    color: inherit;
+  }
+  
+  .nav-list li a:hover {
+    background: var(--main-white);
+    color: var(--main-red);
+    transition: 0.3s ease-in-out;
+    border-radius: 3px;
+  }
+  
+  /********** Welcome-Section ***********/
+  
+  #welcome-section{
+    margin-top: 45px;
+    height: calc(100vh - 45px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-gray);
+  }
+  
+  #welcome-section h1 {
+    font-size: 4.5rem;
+    color: var(--main-white);
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  #welcome-section p {
+    color: var(--main-red);
+    font-weight: 600;
+    letter-spacing: 1.5;
+    font-style: italic;
+  }
+  
+  /********** Cards-Section ***********/
+  
+  #projects {
+    padding: 4rem 0px;
+    background-color: var(--main-blue);
+    height: auto;
+  }
+
+  #projects .container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+.projects-header {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .projects-header h2 {
+    margin-bottom: 30px;
+    color: var(--main-white);
+    font-size: 4rem;
+    border-bottom: 2px solid var(--main-white);
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .cards .card {
+    width: 30rem;
+    height: 30rem;
+    box-shadow: 5px 5px 10px black;
+    margin: 0 auto;
+  }
+  
+  .cards .card .project-img img{
+    display: block;
+    width: 100%;
+    height: 237px;
+    object-fit: cover;
+    border-radius: 2px 2px 0px 0px;
+  }
+
+.project-title {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.1rem 0;
+    background-color: var(--main-gray);
+    color: var(--main-white);
+  }
+
+  .title-span {
+   color: var(--main-gray);
+   font-size: 1.8rem;
+  }
+
+  .project-title:hover .title-span {
+    color: var(--main-red);
+    transition: color 0.3s ease-in-out;
+  }
+
+  .project-title-text{
+    padding: 0px 1rem;
+  }
+
+  /********** Social-Media ***********/
+
+  .social-media {
+    width: 100%;
+    text-align: center;
+    background-color: #dfdfdf;
+    padding: 8rem 0;
+  }
+
+  .social-media .contact_me_title {
+    font-size: 4rem;
+    font-family: 'Urbanist', sans-serif;
+  }
+
+  .social-media .social-media-icons {
+    width: 100rem;
+    height: 24rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+  }
+
+  .social-media .social-media-icons .social-icons-card {
+    width: 15rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #c5c5c5;
+    border-radius: 0.4rem;
+    margin: 0 auto;
+    transition: border 0.5s
+  }
+
+  .social-media .social-media-icons .social-icons-card:hover {
+    border: 2px solid #000;
+    cursor: pointer;
+  }
+
+  .social-icons-card .social_link {
+    font-size: 1.8rem;
+    color: #848484;
+    text-decoration: none;
+    padding: 1.6rem 2rem;
+  }
+
+  .social-icons-card i {
+    color: #000;
+    margin-right: 0.7rem;
+    font-size: 2.5rem;
+  }
+
+    /********** Footer ***********/
+
+    .footer {
+      width: 100%;
+      height: 14rem;
+      background: var(--main-gray);
+      color: var(--main-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 0.4rem solid var(--main-red)
+    }
+
+    .footer-text {
+      margin: 0 auto;
+      width: 90%;
+      text-align: center;
+    }
+
+    .footer-text span {
+      color: var(--main-red);
+    }
+
+    @media only screen and (max-width: 1110px) {
+      header {
+        z-index: 10;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(30rem, 1fr));
+        width: 100%;
+      }
+
+      .social-media .social-media-icons {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(6rem, 1fr));
+        width: 60rem;
+      }
+    }
+
+    @media only screen and (max-width: 740px) {
+      #welcome-section h1 {
+        font-size: 3rem;
+      }
+
+      .projects-header h2 {
+        font-size: 2.5rem;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: minmax(30rem, 1fr);
+        width: 100%;
+      }
+
+      .social-media {
+        padding: 5rem 0;
+      }
+
+      .social-media .contact_me_title {
+        font-size: 3rem;
+      }
+
+      .social-media .social-media-icons {
+        display: grid;
+        grid-template-columns: minmax(6rem, 1fr);
+        gap: 0.5rem;
+        width: 40rem;
+        height: 40rem;
+      }
+
+    }
+
+    @media only screen and (max-width: 601px) {
+      .cards {
+        margin: 2rem auto;
+        width: 100%;
+      }
+    }
