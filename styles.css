@@ -306,6 +306,15 @@
     }
 
     @media only screen and (max-width: 601px) {
+        .nav-list li:nth-child(1) {
+        display: none;
+      }
+
+      .nav-link {
+        padding: 0.3rem 0.4rem;
+        margin-left: 0.2rem ;
+      }
+
       .cards {
         margin: 2rem auto;
         width: 100%;
